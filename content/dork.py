@@ -7,6 +7,6 @@ class Dork:
         user = str(input("[Dork] >_ "))
         print("[+] Here's The Results")
         send = req.request("GET", "http://www1.search-results.com/web?q=" + user)
-        parsing = BeautifulSoup(send.data, features="lxml")
+        parsing = BeautifulSoup(send.data, features="html.parser")
         for data in parsing.find_all("cite"):
             print(data.string)
