@@ -2,6 +2,8 @@ import os
 from bs4 import BeautifulSoup as bs
 import urllib3 as url
 from content.xss import *
+from content.dork import *
+from content.sc import *
 
 class Main:
     def banner():
